@@ -1,6 +1,6 @@
 RETURN_SOURCE_DOCUMENTS: True
-VECTOR_COUNT: 2
-CHUNK_SIZE: 500
+VECTOR_COUNT: 1
+CHUNK_SIZE: 256
 CHUNK_OVERLAP: 50
 DATA_PATH: 'data/'
 DB_FAISS_PATH: 'vectorstore/db_faiss'
@@ -8,5 +8,5 @@ DB_FAISS_PATH: 'vectorstore/db_faiss'
 # MODEL_BIN_PATH: 'models/mpt-7b-instruct.ggmlv3.q8_0.bin'
 MODEL_TYPE: 'llama'
 MODEL_BIN_PATH: 'models/llama-2-7b-chat.ggmlv3.q8_0.bin'
-MAX_NEW_TOKENS: 256
-TEMPERATURE: 0.01
+MAX_NEW_TOKENS: 128
+TEMPERATURE: 0.2
