@@ -35,8 +35,14 @@ if __name__ == "__main__":
     for i, doc in enumerate(source_docs):
         print(f'\nSource Document {i+1}\n')
         print(f'Source Text: {doc.page_content}')
-        print(f'Document Name: {doc.metadata["source"]}')
-        print(f'Page Number: {doc.metadata["page"]}\n')
-        print('='* 60)
 
+        # Create a clickable link to the PDF
+        file_path = doc.metadata["source"]
+        page_number = doc.metadata["page"]
+        link = f"file://{file_path}#page={page_number}"
+        
+        print(f'Document Name: \033]8;;{link}\033\\{file_path}\033]8;;\033\\')
+        print(f'Page Number: {page_number}\n')
+        print('='* 60)
+        
     print(f"Time to retrieve response: {end - start}")
