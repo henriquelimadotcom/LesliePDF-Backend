@@ -42,4 +42,4 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     
-    run_db_build(args.data_path, args.recursive)
+    run_db_build(args.p, args.r)
