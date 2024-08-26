@@ -37,7 +37,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build FAISS Vector Database")
     parser.add_argument('-p', type=str, default=cfg.DATA_PATH,
                         help="Path to the directory containing PDF files. Default is set in config.")
-    parser.add_argument('-r', type=bool, default=True,
+    parser.add_argument('-r', action='store-true',
                         help="Whether to load files recursively. Default is True.")
     
     args = parser.parse_args()
